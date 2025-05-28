@@ -98,6 +98,10 @@ func (o *NatsConfig) Overlay(overlay *NatsConfig) {
 		o.ServerURL = overlay.ServerURL
 	}
 
+	if overlay.JsDomain != "" {
+		o.JsDomain = overlay.JsDomain
+	}
+
 	if overlay.Certificate != "" && overlay.Key != "" {
 		o.Certificate = overlay.Certificate
 		o.Key = overlay.Key
